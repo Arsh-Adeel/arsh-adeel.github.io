@@ -1,0 +1,28 @@
+main {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+main h1 {
+    color: #cc0000;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+    text-align: left;
+}
+
+#successMessage {
+    color: green;
+    margin-top: 15px;
+    font-weight: bold;
+}

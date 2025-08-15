@@ -1,0 +1,29 @@
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main h1 {
+    color: #cc0000;
+    margin-bottom: 20px;
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+}
+
+main ul li {
+    background-color: #f2f2f2;
+    margin: 10px auto;
+    padding: 15px;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+}
+
+main img.banner {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
