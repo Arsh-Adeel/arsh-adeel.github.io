@@ -1,26 +1,190 @@
+/* ==========================
+   Global / Main Styles
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0a1a2f; /* dark blue */
+  color: white;
+  line-height: 1.6;
+}
+
+header {
+  background: #071324;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-bottom: 2px solid #5dade2;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #5dade2;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: white;
+}
+
 main {
-    padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
 }
 
-.initiative {
-    margin-bottom: 40px;
-    text-align: center;
+footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  background: #071324;
+  border-top: 2px solid #5dade2;
+  font-size: 0.9rem;
 }
 
-.initiative h2 {
-    color: #cc0000;
-    margin-bottom: 10px;
+/* ==========================
+   Carousel container
+========================== */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(93, 173, 226, 0.3); /* accent shadow */
+  margin: 0 auto;
 }
 
-.initiative p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.initiative-img {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #5dade2;
+}
+
+/* ==========================
+   Carousel buttons
+========================== */
+.carousel-controls button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(93, 173, 226, 0.3);
+  border: none;
+  font-size: 2rem;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 3;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.carousel-controls button:hover {
+  background: rgba(93, 173, 226, 0.6);
+  transform: translateY(-50%) scale(1.1);
+}
+
+#prev { left: 10px; }
+#next { right: 10px; }
+
+/* ==========================
+   Carousel dots (centered)
+========================== */
+/* ==========================
+   Carousel dots (on top of image)
+========================== */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;              /* slightly above the bottom */
+  left: 50%;                 /* start from the center */
+  transform: translateX(-50%); /* center horizontally */
+  display: flex;
+  gap: 8px;                  /* space between dots */
+  z-index: 5;                /* above images */
+}
+
+.carousel-dots .dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(93, 173, 226, 0.5); /* semi-transparent over image */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.carousel-dots .dot.active {
+  background: #5dade2;
+  transform: scale(1.2);
+}
+
+/* ==========================
+   Dynamic caption section
+========================== */
+.details {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  background: #0a1a2f; 
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #5dade2;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* ==========================
+   Responsive carousel
+========================== */
+@media (max-width: 768px) {
+  .carousel { height: 300px; }
+  .carousel-controls button { font-size: 1.5rem; padding: 8px; }
+  main { width: 90%; padding: 0 1rem; }
+}
+
+@media (max-width: 480px) {
+  .carousel { height: 220px; }
+  .carousel-controls button { font-size: 1.2rem; padding: 6px; }
+  .carousel-dots .dot { width: 10px; height: 10px; }
+  .details { font-size: 1rem; padding: 1rem; }
 }

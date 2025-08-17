@@ -1,28 +1,28 @@
-main {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
+.feedback-form {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #5dade2;
+  background: #112b45;
+  text-align: center;
 }
 
-main h1 {
-    color: #cc0000;
-    margin-bottom: 20px;
+/* Responsive form wrapper */
+.form-container {
+  position: relative;
+  width: 100%;
+  padding-top: 150%; /* 963 / 640 ≈ 1.504, so 150% */
+  overflow: hidden;
+  border-radius: 12px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-form label {
-    font-weight: bold;
-    text-align: left;
-}
-
-#successMessage {
-    color: green;
-    margin-top: 15px;
-    font-weight: bold;
+/* Responsive iframe */
+.form-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }

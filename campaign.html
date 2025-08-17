@@ -1,44 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
-<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arsh Campaign - Initiatives</title>
-<link rel="stylesheet" href="css/global.css">
-<link rel="stylesheet" href="css/campaign.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaign</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/campaign.css">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
-<header>
-<img src="images/logo.png" alt="Campaign Logo" class="logo">
-<nav>
-<a href="index.html" onclick="window.location.href='index.html';">Home</a><a href="campaign.html">Campaign</a>
-<a href="achievements.html">Achievements</a>
-<a href="feedback.html">Feedback</a>
-</nav>
-</header>
-<main>
-<h1>My Campaign Initiatives</h1>
-<section class="initiative">
-<h2>Sports Facilities</h2>
-<img src="images/sports.jpg" alt="Sports" class="initiative-img">
-<p>Using nearby grounds and extending sports periods to ensure everyone enjoys physical activity.</p>
-</section>
-<section class="initiative">
-<h2>Physics & Chemistry Labs</h2>
-<img src="images/physics-lab.jpg" alt="Physics Lab" class="initiative-img">
-<img src="images/chemistry.jpg" alt="Chemistry Lab" class="initiative-img">
-<p>Reviving physics and chemistry labs so students can perform practical experiments again.</p>
-</section>
-<section class="initiative">
-<h2>Computer Lab</h2>
-<img src="images/computer-lab.jpg" alt="Computer Lab" class="initiative-img">
-<p>Upgrading computers and software so every student can learn effectively.</p>
-</section>
-</main>
-<footer>
-<p>&copy; 2025 Arsh's Student Council Campaign</p>
-</footer>
+  <header>
+    <h1>My Campaign</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="campaign.html" class="active">Campaign</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Campaign Highlights</h2>
+
+    <!-- Carousel -->
+<div class="carousel">
+  <div class="carousel-track">
+        <div class="carousel-slide">
+         <img src="images/w1.png" alt="Campaign 4">
+        </div>
+        <div class="carousel-slide">
+         <img src="images/w2.png" alt="Campaign 5">
+        </div>
+        <div class="carousel-slide">
+         <img src="images/w3.png" alt="Campaign 6">
+        </div>
+        <div class="carousel-slide">
+         <img src="images/computer-lab.jpg" alt="Campaign 7">
+        </div>
+       <div class="carousel-slide active">
+          <img src="images/sports.jpg" alt="Campaign 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/physics-lab.jpg" alt="Campaign 2">
+        </div>
+        <div class="carousel-slide">
+         <img src="images/chemistry.jpg" alt="Campaign 3">
+        </div>
+  </div>
+</div>
+
+      </div>
+
+      <!-- Controls -->
+      <div class="carousel-controls">
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+      </div>
+
+      <!-- Dots -->
+      <div class="carousel-dots"></div>
+    </div>
+
+    <!-- Dynamic caption below carousel -->
+    <section class="details">
+      <p id="carousel-text"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vote for Your Future</p>
+  </footer>
+
+  <!-- JavaScript for carousel -->
+  <script src="js/campaign.js"></script>
 </body>
 </html>
